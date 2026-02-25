@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Editor from '@monaco-editor/react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -284,13 +284,17 @@ function App() {
     
     try {
       const response = await fetch(`${API_URL}/problems/arrays/${problem.id}`);
+      if (!response.ok) {
+        throw new Error(`Failed to load problem ${problem.id}`);
+      }
       const data = await response.json();
-      
-      const template = `${data.signature}\n    # Write your solution here\n    pass\n`;
+      setCurrentProblem(data);
+
+      const template = buildCodeTemplate(data);
       setCode(template);
     } catch (error) {
       console.error('Error loading problem:', error);
-      const template = `def ${problem.function}():\n    # Write your solution here\n    pass\n`;
+      const template = buildCodeTemplate(problem);
       setCode(template);
     }
   };
@@ -334,7 +338,7 @@ function App() {
         body: JSON.stringify({
           code,
           function: currentProblem.function,
-          test_input: currentProblem.testcases?.tests?.[0]?.input || []
+          testInput: currentProblem.testcases?.tests?.[0]?.input || []
         })
       });
       const data = await response.json();
@@ -344,6 +348,14 @@ function App() {
     }
     
     setLoading(false);
+  };
+
+
+  const buildCodeTemplate = (problem) => {
+    const signature = problem?.signature || '';
+    const match = signature.match(/def\s+\w+\((.*)\):?/);
+    const args = match?.[1]?.trim() ? match[1].trim() : '';
+    return `function ${problem.function}(${args}) {\n  // Write your solution here\n}\n`;
   };
 
   const getDifficultyStyle = (difficulty) => {
@@ -396,7 +408,7 @@ function App() {
         <div style={{ color: '#808080', marginTop: '15px' }}>
           <strong>Function signature:</strong>
           <div style={{ fontFamily: 'monospace', marginTop: '5px' }}>
-            {currentProblem.signature}
+            {`function ${currentProblem.function}(...) { ... }`}
           </div>
         </div>
       </div>
@@ -533,7 +545,7 @@ function App() {
         <div style={styles.editor}>
           <Editor
             height="100%"
-            defaultLanguage="python"
+            defaultLanguage="javascript"
             value={code}
             onChange={(value) => setCode(value || '')}
             theme="vs-dark"
