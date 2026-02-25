@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "input": [
+        "barfoothefoobarman",
+        [
+          "foo",
+          "bar"
+        ]
+      ],
+      "expected": [
+        0,
+        9
+      ]
+    }
+  ]
+}

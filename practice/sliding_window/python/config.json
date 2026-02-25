@@ -1,0 +1,35 @@
+{
+  "concept": "sliding_window",
+  "questions": {
+    "1": {
+      "difficulty": "easy",
+      "title": "Maximum Average Subarray I",
+      "function": "max_average_subarray"
+    },
+    "2": {
+      "difficulty": "easy",
+      "title": "Find All Anagrams in a String",
+      "function": "find_anagrams"
+    },
+    "101": {
+      "difficulty": "medium",
+      "title": "Longest Repeating Character Replacement",
+      "function": "character_replacement"
+    },
+    "102": {
+      "difficulty": "medium",
+      "title": "Permutation in String",
+      "function": "check_inclusion"
+    },
+    "201": {
+      "difficulty": "hard",
+      "title": "Minimum Window Substring",
+      "function": "min_window_substring"
+    },
+    "202": {
+      "difficulty": "hard",
+      "title": "Substring with Concatenation of All Words",
+      "function": "find_substring_concat"
+    }
+  }
+}

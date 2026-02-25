@@ -1,0 +1,35 @@
+{
+  "concept": "dynamic_programming",
+  "questions": {
+    "1": {
+      "difficulty": "easy",
+      "title": "Climbing Stairs",
+      "function": "climb_stairs"
+    },
+    "2": {
+      "difficulty": "easy",
+      "title": "Min Cost Climbing Stairs",
+      "function": "min_cost_climbing_stairs"
+    },
+    "101": {
+      "difficulty": "medium",
+      "title": "House Robber",
+      "function": "house_robber"
+    },
+    "102": {
+      "difficulty": "medium",
+      "title": "Coin Change",
+      "function": "coin_change"
+    },
+    "201": {
+      "difficulty": "hard",
+      "title": "Longest Increasing Subsequence O(n log n)",
+      "function": "length_of_lis"
+    },
+    "202": {
+      "difficulty": "hard",
+      "title": "Edit Distance",
+      "function": "edit_distance"
+    }
+  }
+}
