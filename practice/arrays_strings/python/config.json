@@ -1,0 +1,35 @@
+{
+  "concept": "arrays_strings",
+  "questions": {
+    "1": {
+      "difficulty": "easy",
+      "title": "Two Sum",
+      "function": "two_sum"
+    },
+    "2": {
+      "difficulty": "easy",
+      "title": "Valid Anagram",
+      "function": "is_anagram"
+    },
+    "101": {
+      "difficulty": "medium",
+      "title": "Product of Array Except Self",
+      "function": "product_except_self"
+    },
+    "102": {
+      "difficulty": "medium",
+      "title": "Longest Consecutive Sequence",
+      "function": "longest_consecutive"
+    },
+    "201": {
+      "difficulty": "hard",
+      "title": "Trapping Rain Water",
+      "function": "trap_rain_water"
+    },
+    "202": {
+      "difficulty": "hard",
+      "title": "Minimum Window Substring",
+      "function": "min_window_substring"
+    }
+  }
+}

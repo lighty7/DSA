@@ -1,0 +1,35 @@
+{
+  "concept": "trees_graphs",
+  "questions": {
+    "1": {
+      "difficulty": "easy",
+      "title": "Binary Tree Level Order (array tree)",
+      "function": "level_order_array_tree"
+    },
+    "2": {
+      "difficulty": "easy",
+      "title": "Flood Fill",
+      "function": "flood_fill"
+    },
+    "101": {
+      "difficulty": "medium",
+      "title": "Number of Islands",
+      "function": "num_islands"
+    },
+    "102": {
+      "difficulty": "medium",
+      "title": "Course Schedule",
+      "function": "can_finish_courses"
+    },
+    "201": {
+      "difficulty": "hard",
+      "title": "Word Ladder Length",
+      "function": "ladder_length"
+    },
+    "202": {
+      "difficulty": "hard",
+      "title": "Serialize/Deserialize Validity Check",
+      "function": "serialize_deserialize_roundtrip"
+    }
+  }
+}

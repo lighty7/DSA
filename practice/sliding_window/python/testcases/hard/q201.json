@@ -1,0 +1,11 @@
+{
+  "tests": [
+    {
+      "input": [
+        "ADOBECODEBANC",
+        "ABC"
+      ],
+      "expected": "BANC"
+    }
+  ]
+}

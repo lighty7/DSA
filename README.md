@@ -13,6 +13,9 @@
 5. [Visual Resources](#visual-resources)
 6. [10-Week Study Plan](#10-week-study-plan)
 7. [Practice Platforms](#practice-platforms)
+8. [LeetCode Tutorials (Python + Java)](#leetcode-tutorials-python--java)
+9. [ASCII Algorithm Visuals](#ascii-algorithm-visuals)
+10. [Practice Environment](#practice-environment)
 
 ---
 
@@ -1530,6 +1533,44 @@ print(is_power_of_two(6))   # False
 | **Blind 75** | Top 75 interview problems | Essential |
 | **HackerRank** | Company-specific | Various |
 | **Codeforces** | Competitive programming | Hard |
+
+---
+
+## LeetCode Tutorials (Python + Java)
+
+If you want a dedicated interview-prep path from pure basics to advanced concepts with examples in both Python and Java, use:
+
+- [`LEETCODE_TUTORIALS.md`](LEETCODE_TUTORIALS.md)
+
+It includes:
+- Structured stages from foundations to expert topics
+- Pattern-based learning for interview speed
+- Python + Java code examples
+- Real-world use cases for each core topic
+- A 12-week interview preparation plan
+
+---
+
+## ASCII Algorithm Visuals
+
+For concept-by-concept visual explanations of what algorithms are doing (using ASCII diagrams), see:
+
+- [`ALGORITHM_VISUALS_ASCII.md`](ALGORITHM_VISUALS_ASCII.md)
+
+It includes **why and where** to use each algorithm in interviews and real-world systems.
+
+---
+
+## Practice Environment
+
+For hands-on practice by concept, difficulty, and question number, use:
+
+- [`practice/README.md`](practice/README.md)
+
+You can pick a concept, implement a function in `solutions.py`, then run tests by only passing:
+- concept name
+- difficulty (`easy`/`medium`/`hard`)
+- question number
 
 ---
 

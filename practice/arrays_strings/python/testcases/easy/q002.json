@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "input": [
+        "anagram",
+        "nagaram"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "rat",
+        "car"
+      ],
+      "expected": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "concept": "linked_lists",
+  "questions": {
+    "1": {
+      "difficulty": "easy",
+      "title": "Reverse Linked List as array simulation",
+      "function": "reverse_list_array"
+    },
+    "2": {
+      "difficulty": "easy",
+      "title": "Merge Two Sorted Lists as arrays",
+      "function": "merge_sorted_arrays"
+    },
+    "101": {
+      "difficulty": "medium",
+      "title": "Remove Nth Node From End",
+      "function": "remove_nth_from_end_array"
+    },
+    "102": {
+      "difficulty": "medium",
+      "title": "Reorder List",
+      "function": "reorder_list_array"
+    },
+    "201": {
+      "difficulty": "hard",
+      "title": "Reverse Nodes in K Group",
+      "function": "reverse_k_group_array"
+    },
+    "202": {
+      "difficulty": "hard",
+      "title": "Merge K Sorted Lists",
+      "function": "merge_k_sorted_arrays"
+    }
+  }
+}

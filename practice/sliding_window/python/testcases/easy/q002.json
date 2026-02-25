@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "input": [
+        "cbaebabacd",
+        "abc"
+      ],
+      "expected": [
+        0,
+        6
+      ]
+    }
+  ]
+}

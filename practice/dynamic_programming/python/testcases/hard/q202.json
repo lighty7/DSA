@@ -1,0 +1,11 @@
+{
+  "tests": [
+    {
+      "input": [
+        "horse",
+        "ros"
+      ],
+      "expected": 3
+    }
+  ]
+}

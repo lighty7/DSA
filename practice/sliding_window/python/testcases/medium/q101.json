@@ -1,0 +1,11 @@
+{
+  "tests": [
+    {
+      "input": [
+        "AABABBA",
+        1
+      ],
+      "expected": 4
+    }
+  ]
+}
