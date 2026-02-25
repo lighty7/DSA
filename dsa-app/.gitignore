@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build
+frontend/build/
+backend/build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+venv39/
+*.egg-info/
+.eggs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Secrets
+*.pem
+*.key
+credentials.json
