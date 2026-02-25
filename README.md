@@ -13,6 +13,7 @@
 5. [Visual Resources](#visual-resources)
 6. [10-Week Study Plan](#10-week-study-plan)
 7. [Practice Platforms](#practice-platforms)
+8. [LeetCode Tutorials (Python + Java)](#leetcode-tutorials-python--java)
 
 ---
 
@@ -1530,6 +1531,21 @@ print(is_power_of_two(6))   # False
 | **Blind 75** | Top 75 interview problems | Essential |
 | **HackerRank** | Company-specific | Various |
 | **Codeforces** | Competitive programming | Hard |
+
+---
+
+## LeetCode Tutorials (Python + Java)
+
+If you want a dedicated interview-prep path from pure basics to advanced concepts with examples in both Python and Java, use:
+
+- [`LEETCODE_TUTORIALS.md`](LEETCODE_TUTORIALS.md)
+
+It includes:
+- Structured stages from foundations to expert topics
+- Pattern-based learning for interview speed
+- Python + Java code examples
+- Real-world use cases for each core topic
+- A 12-week interview preparation plan
 
 ---
 
