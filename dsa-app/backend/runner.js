@@ -13,20 +13,23 @@ async function execCode(code, functionName, testcases) {
       log: () => {}, // Suppress console.log
       error: () => {},
       warn: () => {}
-    }
+    },
+    Date
   };
 
   try {
     // Create function from code
     const wrappedCode = `
-      ${code}
-      return typeof ${functionName} === 'function' ? ${functionName} : null;
+      (() => {
+        ${code}
+        return typeof ${functionName} === 'function' ? ${functionName} : null;
+      })()
     `;
-    
+
     const createFunction = new vm.Script(wrappedCode);
     const context = vm.createContext(sandbox);
     const userFunc = createFunction.runInContext(context);
-    
+
     if (!userFunc) {
       results.success = false;
       results.error = `Function '${functionName}' not found in code`;
@@ -37,24 +40,24 @@ async function execCode(code, functionName, testcases) {
     for (let i = 0; i < testcases.length; i++) {
       const test = testcases[i];
       const testResult = { index: i + 1, passed: false, input: test.input || [] };
-      
+
       try {
         const args = test.input || [];
-        const startTime = performance.now();
-        
+        const startTime = Date.now();
+
         let result;
         if (Array.isArray(args)) {
           result = userFunc(...args);
         } else {
           result = userFunc(args);
         }
-        
-        const executionTime = performance.now() - startTime;
-        
+
+        const executionTime = Date.now() - startTime;
+
         testResult.output = result;
         testResult.expected = test.expected;
         testResult.timeMs = Math.round(executionTime * 100) / 100;
-        
+
         // Compare results
         if (arraysEqual(result, test.expected)) {
           testResult.passed = true;
@@ -62,16 +65,16 @@ async function execCode(code, functionName, testcases) {
         } else {
           results.summary.failed++;
         }
-        
+
       } catch (e) {
         testResult.error = e.message;
         testResult.output = null;
         results.summary.failed++;
       }
-      
+
       results.tests.push(testResult);
     }
-    
+
   } catch (e) {
     results.success = false;
     results.error = `Compilation error: ${e.message}`;

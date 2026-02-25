@@ -70,8 +70,10 @@ async function measureExecution(code, functionName, testData, size) {
   
   try {
     const wrappedCode = `
-      ${code}
-      return typeof ${functionName} === 'function' ? ${functionName} : null;
+      (() => {
+        ${code}
+        return typeof ${functionName} === 'function' ? ${functionName} : null;
+      })()
     `;
     
     const createFunction = new vm.Script(wrappedCode);
